@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Register
-    Created on : 2021-9-4, 14:05:51
+    Document   : Login
+    Created on : 2021-9-5, 14:06:07
     Author     : kj760
 --%>
 
@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Register</title>
+    <title>Login</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -25,21 +25,21 @@
     <![endif]-->
   </head>
   <body>
-      <h1>Register</h1>
+    <h1>Login</h1>
+    <div class="container-fluid">
     <form role="form">
   <div class="form-group">
     <label for="name">Email</label>
-    <input type="text" class="form-control" id="email" placeholder="please enter your email">
+    <input type="text" class="form-control" id="name" placeholder="Please enter your email">
   </div>
   <div class="form-group">
-    <label for="name">password</label>
-    <input type="password" class="form-control" id="password" placeholder="please enter your password">
+    <label for="name">Password</label>
+    <input type="Password" class="form-control" id="password" placeholder="Please enter your password">
   </div>
-       
-  
-  <button type="submit" class="btn btn-default">submit</button>
+ 
+        <button type="submit" class="btn btn-default">Submit</button>
 </form>
-
+        </div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->

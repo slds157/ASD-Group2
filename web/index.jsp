@@ -78,8 +78,8 @@
                 <h3>goods</h3>
                 <p>description</p>
                 <p>
-                    <a href="#" class="btn btn-primary" role="button">
-                        buy
+                    <a href="buyProducts.jsp" class="btn btn-primary" role="button">
+                        buy 
                     </a> 
                     <a href="#" class="btn btn-default" role="button">
                         add to cart
