@@ -26,7 +26,7 @@
   </head>
   <body>
     <h1>Pruducts</h1>
-    <form role="form" action="index.jsp">
+    <form role="form" action="Main.jsp">
         <div>
             <p>Products name</p>
             <p>Price: xxx$ </p>

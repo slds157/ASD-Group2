@@ -26,7 +26,8 @@
   </head>
   <body>
       <h1>Register</h1>
-    <form role="form">
+      <div align="center">
+          <form role="form" action="Main.jsp">
   <div class="form-group">
     <label for="name">Email</label>
     <input type="text" class="form-control" id="email" placeholder="please enter your email">
@@ -39,7 +40,7 @@
   
   <button type="submit" class="btn btn-default">submit</button>
 </form>
-
+</div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->

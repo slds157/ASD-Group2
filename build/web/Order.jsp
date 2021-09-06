@@ -1,6 +1,6 @@
 <%-- 
-    Document   : buyProducts
-    Created on : 2021-9-5, 16:34:18
+    Document   : Order
+    Created on : 2021-9-6, 17:09:13
     Author     : kj760
 --%>
 
@@ -25,25 +25,31 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Pruducts</h1>
-    <form role="form" action="Main.jsp">
-        <div>
-            <p>Products name</p>
-            <p>Price: xxx$ </p>
-        </div>
-  <div class="form-group">
-      <p>ammount:</p>
-<input type="number" class="form-control" id="ammount" placeholder="请输入名称">
-     
-  </div>
-  <div class="form-group">
-      <p>address:</p>
-<input type="text" class="form-control" id="address" placeholder="请输入名称">
-     
-  </div>
-        <p>total price: </p>
-        <button type="submit" class="btn btn-default">pay</button>  <button type="submit" class="btn btn-default">Cancel</button> 
-</form>
+      <div>
+          <table class="table">
+              <h1>Order</h1> <a href="Main.jsp" class="btn btn-default" role="button">Back</a>
+  <thead>
+    <tr>
+      <th>ItemName</th>
+      <th>ItemID</th>
+      <th>ammount</th>
+      <th>Price</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>computer</td>
+      <td>100001</td>
+      <td>1</td>
+      <td>500$</td>
+      <td>Bangalore</td>
+    </tr>
+  </tbody>
+</table>
+          
+      </div>
+
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->

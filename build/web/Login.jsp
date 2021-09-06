@@ -27,7 +27,7 @@
   <body>
     <h1>Login</h1>
     <div class="container-fluid">
-    <form role="form">
+        <form role="form" action="Main.jsp">
   <div class="form-group">
     <label for="name">Email</label>
     <input type="text" class="form-control" id="name" placeholder="Please enter your email">
