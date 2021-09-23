@@ -78,7 +78,7 @@
                 <h3>goods</h3>
                 <p>description</p>
                 <p>
-                    <a href="buyProducts.jsp" class="btn btn-primary" role="button">
+                    <a href="NotLogin.jsp" class="btn btn-primary" role="button">
                         buy 
                     </a> 
                     <a href="#" class="btn btn-default" role="button">
