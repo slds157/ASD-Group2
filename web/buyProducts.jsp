@@ -26,10 +26,11 @@
   </head>
   <body>
     <h1>Pruducts</h1>
-    <form role="form" action="Main.jsp">
+    <form role="form" method="post" action="CreateOrderServlet">
         <div>
-            <p>Products name</p>
-            <p>Price: xxx$ </p>
+            <p>USB Drive</p>
+            <p>Price: 100$ </p>
+            
         </div>
   <div class="form-group">
       <p>ammount:</p>
@@ -39,9 +40,10 @@
   <div class="form-group">
       <p>address:</p>
 <input type="text" class="form-control" id="address" placeholder="请输入名称">
-     
+<input type="hidden" class="form-control" id="userId" value="100000">
+     <input type="hidden" class="form-control" id="price" value="100">
+     <input type="hidden" class="form-control" id="itemName" value="USB Drive">
   </div>
-        <p>total price: </p>
         <button type="submit" class="btn btn-default">pay</button>  <button type="submit" class="btn btn-default">Cancel</button> 
 </form>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->

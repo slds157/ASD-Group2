@@ -17,6 +17,14 @@ public class Order {
    private int bill;
    private int userId;
 
+    public Order(String itemName, int price, int ammount, int bill, int userId) {
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.userId = userId;
+    }
+
     public Order(int orderId, String itemName, int price, int ammount, int bill, int userId) {
         this.orderId = orderId;
         this.itemName = itemName;
