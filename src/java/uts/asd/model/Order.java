@@ -16,7 +16,40 @@ public class Order {
    private int ammount;
    private int bill;
    private int userId;
+   private String address;
 
+    public Order(String itemName, int price, int ammount, int bill, int userId, String address) {
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.userId = userId;
+        this.address = address;
+    }
+
+    public Order(int orderId, String itemName, int price, int ammount, int bill, int userId, String address) {
+        this.orderId = orderId;
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.userId = userId;
+        this.address = address;
+    }
+   
+   
+    
+   
+   
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+   
+   
     public Order(String itemName, int price, int ammount, int bill, int userId) {
         this.itemName = itemName;
         this.price = price;

@@ -34,15 +34,15 @@
         </div>
   <div class="form-group">
       <p>ammount:</p>
-<input type="number" class="form-control" id="ammount" placeholder="请输入名称">
+<input type="number" class="form-control" name="ammount" placeholder="请输入名称">
      
   </div>
   <div class="form-group">
       <p>address:</p>
-<input type="text" class="form-control" id="address" placeholder="请输入名称">
-<input type="hidden" class="form-control" id="userId" value="100000">
-     <input type="hidden" class="form-control" id="price" value="100">
-     <input type="hidden" class="form-control" id="itemName" value="USB Drive">
+<input type="text" class="form-control" name="address" placeholder="请输入名称">
+<input type="hidden" class="form-control" name="userId" value="100000">
+     <input type="hidden"  name="price" value="100">
+     <input type="hidden" name="itemName" value="USB Drive">
   </div>
         <button type="submit" class="btn btn-default">pay</button>  <button type="submit" class="btn btn-default">Cancel</button> 
 </form>
