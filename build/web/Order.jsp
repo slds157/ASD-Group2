@@ -1,12 +1,14 @@
 <%-- 
     Document   : Order
-    Created on : 2021-9-6, 17:09:13
+    Created on : 2021-10-3, 0:39:46
     Author     : kj760
 --%>
 
+<%@page import="uts.asd.model.Order"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,29 +28,35 @@
   </head>
   <body>
       <div>
-          <table class="table">
-              <h1>Order</h1> <a href="Main.jsp" class="btn btn-default" role="button">Back</a>
+    <table class="table table-striped">
+  <caption>Order</caption>
   <thead>
     <tr>
-      <th>ItemName</th>
-      <th>ItemID</th>
-      <th>ammount</th>
-      <th>Price</th>
-      <th>Address</th>
+      <th>name</th>
+      <th>price</th>
+      <th>account</th>
+      <th>total</th>
     </tr>
   </thead>
   <tbody>
+    <%
+        LinkedList<Order> OrderList = (LinkedList)session.getAttribute("orderlist") ;
+        for(int l = 0; l < OrderList.size();l++)
+        { Order order = (Order)OrderList.get(l);
+    %>
     <tr>
-      <td>computer</td>
-      <td>100001</td>
-      <td>1</td>
-      <td>500$</td>
-      <td>Bangalore</td>
+  <td><%= order.getItemName() %></td>
+  <td><%= order.getPrice() %>$</td>
+  <td><%= order.getAmmount() %></td>
+  <td><%= order.getBill() %>$</td>
+    <%
+        }
+    %>
     </tr>
   </tbody>
 </table>
-          
-      </div>
+    <a href="Main.jsp" class="btn btn-primary" role="button">back</a>
+    </div>
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>

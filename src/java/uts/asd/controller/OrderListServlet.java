@@ -25,20 +25,24 @@ import uts.asd.model.dao.OrderManager;
  */
 public class OrderListServlet extends HttpServlet {
  @Override
-      protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException{
             HttpSession session = request.getSession();
-            int userId = Integer.parseInt(request.getParameter("userId"));
+            int userId = 100000;
             OrderManager manager = (OrderManager) session.getAttribute("ordermanager");
             try
             {  
                     LinkedList<Order> Orderlist = manager.Orderlist(userId);
+                    
                     session.setAttribute("orderlist",Orderlist);
-                    request.getRequestDispatcher("Orderlist.jsp").include(request, response);
+                    System.out.println("*******************");
+                    System.out.println(request.getRequestDispatcher("Order.jsp"));
+                    request.getRequestDispatcher("Order.jsp").include(request, response);
                     
                 
             } catch (SQLException ex){
                 Logger.getLogger(OrderListServlet.class.getName()).log(Level.SEVERE,null,ex);
+                System.out.println(ex.getErrorCode()+"and"+ex.getMessage());
             }
 
     

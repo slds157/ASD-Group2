@@ -25,7 +25,7 @@
     <![endif]-->
   </head>
   <body>
-
+     
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
@@ -62,7 +62,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="Cart.jsp">Cart</a></li>
-            <li><a href="Order.jsp">Order</a></li>
+            <li><a href="OrderListServlet">Order</a></li>
             <li><a href="Logout.jsp">Logout</a></li>
           </ul>
         </li>
