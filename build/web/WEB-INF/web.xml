@@ -12,6 +12,14 @@
         <servlet-name>OrderListServlet</servlet-name>
         <servlet-class>uts.asd.controller.OrderListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PaymentManager</servlet-name>
+        <servlet-class>uts.asd.model.dao.PaymentManager</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentListServlet</servlet-name>
+        <servlet-class>uts.asd.controller.PaymentListServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>OrderListServlet</servlet-name>
         <url-pattern>/OrderListServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentManager</servlet-name>
+        <url-pattern>/PaymentManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentListServlet</servlet-name>
+        <url-pattern>/PaymentListServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

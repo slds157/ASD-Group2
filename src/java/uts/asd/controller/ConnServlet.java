@@ -27,6 +27,7 @@ public class ConnServlet extends HttpServlet {
 
     private DBConnector db;
     private OrderManager ordermanager;
+    private Paymentmanager paymentmanager;
     private Connection conn;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,6 +62,7 @@ public class ConnServlet extends HttpServlet {
            try {
 
                ordermanager = new OrderManager(conn);
+               paymentmanager = new Paymentmanager(conn);
 
            } catch (SQLException ex) {
 
@@ -70,7 +72,8 @@ public class ConnServlet extends HttpServlet {
 
            //export the DB manager to the view-session (JSPs)
 
-           session.setAttribute("ordermanager", ordermanager);           
+           session.setAttribute("ordermanager", ordermanager); 
+           session.setAttribute("paymentmanager", paymentmanager);
 
        }   
     

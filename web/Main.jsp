@@ -63,6 +63,7 @@
           <ul class="dropdown-menu">
             <li><a href="Cart.jsp">Cart</a></li>
             <li><a href="OrderListServlet">Order</a></li>
+            <li><a href="PaymentListServlet">Payment</a></li>
             <li><a href="Logout.jsp">Logout</a></li>
           </ul>
         </li>

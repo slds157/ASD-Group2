@@ -1,13 +1,15 @@
 <%-- 
-    Document   : buyProducts
-    Created on : 2021-9-5, 16:34:18
+    Document   : Payment
+    Created on : 2021-10-3, 20:12:36
     Author     : kj760
 --%>
 
+<%@page import="uts.asd.model.Payment"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="zh-CN">
-  <head>
+<!DOCTYPE html>
+<html>
+     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,27 +27,33 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Pruducts</h1>
-    <form role="form" method="post" action="CreateOrderServlet">
-        <div>
-            <p>USB Drive</p>
-            <p>Price: 100$ </p>
-            
-        </div>
-  <div class="form-group">
-      <p>ammount:</p>
-<input type="number" class="form-control" name="ammount" placeholder="请输入名称">
-     
-  </div>
-  <div class="form-group">
-      <p>address:</p>
-<input type="text" class="form-control" name="address" placeholder="请输入名称">
-<input type="hidden" class="form-control" name="userId" value="100000">
-     <input type="hidden"  name="price" value="100">
-     <input type="hidden" name="itemName" value="USB Drive">
-  </div>
-        <button type="submit" class="btn btn-default">pay</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
-</form>
+      <div>
+    <table class="table table-striped">
+  <caption>Order</caption>
+  <thead>
+    <tr>
+      <th>Card Type</th>
+      <th>Card Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+        LinkedList<Payment> PaymentList = (LinkedList)session.getAttribute("paymentlist") ;
+        for(int l = 0; l < PaymentList.size();l++)
+        { Payment payment = (Payment)PaymentList.get(l);
+    %>
+    <tr>
+  <td><%= payment.getCardType() %></td>
+  <td><%= payment.getCardNum() %></td>
+    <%
+        }
+    %>
+    </tr>
+  </tbody>
+</table>
+    <a href="Main.jsp" class="btn btn-primary" role="button">back</a> <a href="CreatePayment.jsp" class="btn btn-primary" role="button">create</a>
+    </div>
+
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
