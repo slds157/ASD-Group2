@@ -26,10 +26,10 @@
   </head>
   <body>
       <div class="container">
-    <h1>Pruducts</h1>
+    <h1>USB Drive</h1>
     <form role="form" method="post" action="CreateOrderServlet">
         <div>
-            <p>USB Drive</p>
+            
             <p>Price: 100$ </p>
             
         </div>

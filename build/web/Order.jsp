@@ -27,7 +27,7 @@
     <![endif]-->
   </head>
   <body>
-      <div>
+      <div class="container">
     <table class="table table-striped">
   <caption>Order</caption>
   <thead>

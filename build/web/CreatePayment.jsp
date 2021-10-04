@@ -30,15 +30,17 @@
     <form role="form" method="post" action="CreatePaymentServlet">
   <div class="form-group">
       <p>Card Type</p>
-<input type="text" class="form-control" name="cardType" placeholder="请输入名称">
-     
+      <select class="form-control" name="cardType">
+          <option value="credit card">Credit Card</option>
+          <option value="deposit card">Deposit Card</option>
+      </select>
   </div>
   <div class="form-group">
       <p>Card Number</p>
 <input type="number" class="form-control" name="cardNum" placeholder="请输入名称">
 <input type="hidden" class="form-control" name="userId" value="100000">
   </div>
-        <button type="submit" class="btn btn-default">pay</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
+        <button type="submit" class="btn btn-default">Confirm</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
 </form>
     </div>
 
