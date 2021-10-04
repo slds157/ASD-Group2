@@ -20,6 +20,10 @@
         <servlet-name>PaymentListServlet</servlet-name>
         <servlet-class>uts.asd.controller.PaymentListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreatePaymentServlet</servlet-name>
+        <servlet-class>uts.asd.controller.CreatePaymentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>PaymentListServlet</servlet-name>
         <url-pattern>/PaymentListServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatePaymentServlet</servlet-name>
+        <url-pattern>/CreatePaymentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
