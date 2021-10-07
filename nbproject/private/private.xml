@@ -3,18 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/ASD-group2/ASD-Group2/web/confirm.jsp</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/TestPaymentList.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/CreateOrderServlet.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/nbproject/build-impl.xml</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/TestPayment.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/PaymentListServlet.java</file>
             <file>file:/D:/ASD-group2/ASD-Group2/web/Login.jsp</file>
             <file>file:/D:/ASD-group2/ASD-Group2/web/Main.jsp</file>
             <file>file:/D:/ASD-group2/ASD-Group2/web/Order.jsp</file>
-            <file>file:/D:/ASD-group2/ASD-Group2/web/Payment.jsp</file>
-            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/CreatePaymentServlet.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/web/Catalogue.jsp</file>
             <file>file:/D:/ASD-group2/ASD-Group2/web/buyProducts.jsp</file>
-            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/CreateOrderServlet.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/web/WEB-INF/web.xml</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/OrderListServlet.java</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/web/index.jsp</file>
             <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/controller/ConnServlet.java</file>
-            <file>file:/D:/ASD-group2/ASD-Group2/src/java/uts/asd/model/dao/Paymentmanager.java</file>
-            <file>file:/D:/ASD-group2/ASD-Group2/web/PaymentConfirm.jsp</file>
             <file>file:/D:/ASD-group2/ASD-Group2/web/CreatePayment.jsp</file>
+            <file>file:/D:/ASD-group2/ASD-Group2/web/addProduct.jsp</file>
         </group>
     </open-files>
 </project-private>
