@@ -25,15 +25,15 @@ public class TestOrder {
      Connection conn = connector.openConnection();
      OrderManager db = new OrderManager(conn);
      
-     System.out.print("Item Name");
+     System.out.print("Item Name: ");
      String orderName = in.nextLine();
-     System.out.print("Price");
+     System.out.print("Price:");
      Integer price = Integer.parseInt(in.nextLine());
-      System.out.print("ammount");
+      System.out.print("ammount: ");
      Integer ammount = Integer.parseInt(in.nextLine());
-     System.out.print("bill");
+     System.out.print("bill:");
      Integer bill = Integer.parseInt(in.nextLine());
-     System.out.print("User Id");
+     System.out.print("User Id: ");
      Integer userId = Integer.parseInt(in.nextLine());
      
      db.createOrder(orderName, price, ammount, bill, userId);
@@ -47,6 +47,6 @@ public class TestOrder {
 
 Logger.getLogger(TestOrder.class.getName()).log(Level.SEVERE, null, ex);
      }
-     System.out.println("Student is added to the database");
+     System.out.println("order is added to the database");
 }
 }

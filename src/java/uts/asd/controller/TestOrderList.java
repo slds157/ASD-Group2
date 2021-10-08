@@ -29,7 +29,7 @@ public class TestOrderList {
      Connection conn = connector.openConnection();
      OrderManager db = new OrderManager(conn);
      
-     System.out.print("user id");
+     System.out.print("user id: ");
      int userId = Integer.parseInt(in.nextLine());
    
      
@@ -51,6 +51,6 @@ public class TestOrderList {
 
 Logger.getLogger(TestOrderList.class.getName()).log(Level.SEVERE, null, ex);
      }
-     System.out.println("Student is added to the database");
+     System.out.println("order history is here");
 }
 }
