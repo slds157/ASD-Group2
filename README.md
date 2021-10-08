@@ -6,4 +6,4 @@ The ASD-Group2/src/java/uts/asd has all the servlet file and model file. Order.j
 
 The ASD-Group2/src/java/uts/asd/controller has all the servlet file. CreateOrderServlet.java, CreatePaymentServlet.java, OrderListServlet.java, PaymentListServlet.java is written by JieKang
 
-The Asd-Group2/src/java/uts/asd/model/dao directory has some database configuration file, the OrderManager.java and Payment
+The Asd-Group2/src/java/uts/asd/model/dao directory has some database configuration file, the OrderManager.java and Paymentmanager.java is written by JieKang.
