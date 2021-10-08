@@ -5,3 +5,5 @@ the ASD-Group2/web director has all the page file. addProduct.jsp, editProduct.j
 The ASD-Group2/src/java/uts/asd has all the servlet file and model file. Order.java and payment.java is written by Jie Kang, Product.java is written by Tuan-Phung.
 
 The ASD-Group2/src/java/uts/asd/controller has all the servlet file. CreateOrderServlet.java, CreatePaymentServlet.java, OrderListServlet.java, PaymentListServlet.java is written by JieKang
+
+The Asd-Group2/src/java/uts/asd/model/dao directory has some database configuration file, the OrderManager.java and Payment
