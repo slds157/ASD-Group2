@@ -1,9 +1,10 @@
 <%-- 
-    Document   : CreatePayment
-    Created on : 2021-10-4, 17:33:20
+    Document   : paymentEdit
+    Created on : 2021-10-24, 20:43:14
     Author     : kj760
 --%>
 
+<%@page import="uts.asd.model.Payment"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,9 +26,12 @@
     <![endif]-->
   </head>
   <body>
+      <%
+          Payment payment = (Payment)session.getAttribute("payment");
+      %>
        <div class="container">
-    <h1>Pruducts</h1>
-    <form role="form" method="post" action="CreatePaymentServlet">
+    <h1>Payment</h1>
+    <form role="form" method="post" action="PaymentUpdateServlet">
   <div class="form-group">
       <p>Card Type</p>
       <select class="form-control" name="cardType">
@@ -37,12 +41,11 @@
   </div>
   <div class="form-group">
       <p>Card Number</p>
-<input type="number" class="form-control" name="cardNum" placeholder="请输入名称">
-<input type="hidden" class="form-control" name="userId" value="100000">
+      <input type="number" class="form-control" name="cardNum" placeholder="<%= payment.getCardNum() %>">
   </div>
   <div class="form-group">
       <p>Name</p>
-<input type="text" class="form-control" name="username" placeholder="请输入名称">
+      <input type="text" class="form-control" name="username" placeholder="<%= payment.getUserName() %>">
   </div>
         <div class="form-group">
       <p>Document Type</p>
@@ -53,7 +56,8 @@
   </div>
          <div class="form-group">
       <p>Document Number</p>
-<input type="number" class="form-control" name="docnum" placeholder="请输入名称">
+      <input type="number" class="form-control" name="docnum" placeholder="<%= payment.getDocNumber() %>">
+      <input type="hidden" class="form-control" name="paymentId" value="<%= payment.getPaymentId() %>">
   </div>
         <button type="submit" class="btn btn-default">Confirm</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
 </form>

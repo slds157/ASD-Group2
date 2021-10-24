@@ -32,8 +32,11 @@
   <caption>Order</caption>
   <thead>
     <tr>
-      <th>Card Type</th>
+     <th>Card Type</th>
       <th>Card Number</th>
+      <th>Name</th>
+      <th>Document Type</th>
+      <th>Document Number</th>
     </tr>
   </thead>
   <tbody>
@@ -43,8 +46,13 @@
         { Payment payment = (Payment)PaymentList.get(l);
     %>
     <tr>
-  <td><%= payment.getCardType() %></td>
-  <td><%= payment.getCardNum() %></td>
+ <td><%= payment.getCardType() %></td>
+      <td><%= payment.getCardNum() %></td>
+      <td><%= payment.getUserName()%></td>
+      <td><%= payment.getDocType() %></td>
+      <td><%= payment.getDocNumber() %></td>
+      <td><a href="PaymentEditServlet?paymentId=<%= payment.getPaymentId() %>">edit</a></td>
+      <td><a href="PaymentDeleteServlet?paymentId=<%= payment.getPaymentId() %>">delete</a></td>
     <%
         }
     %>

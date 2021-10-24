@@ -41,6 +41,7 @@
       <th>Ammount</th>
       <th>Total cost</th>
       <th>Address</th>
+      <th>Payment</th>
     </tr>
   </thead>
   <tbody>
@@ -50,7 +51,8 @@
       <td><%= order.getPrice() %>$</td>
       <td><%= order.getAmmount() %></td>
       <td><%= order.getBill() %>$</td>
-      <td>560001</td>
+      <td><%= order.getAddress()  %></td>
+      <td><%= order.getPayment()  %></td>
     </tr>
   <a href="Main.jsp" class="btn btn-default" role="button">Main Page</a>
   </tbody>

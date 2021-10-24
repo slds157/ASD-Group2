@@ -36,6 +36,8 @@
       <th>price</th>
       <th>account</th>
       <th>total</th>
+      <th>address</th>
+      <th>payment</th>
     </tr>
   </thead>
   <tbody>
@@ -49,9 +51,14 @@
   <td><%= order.getPrice() %>$</td>
   <td><%= order.getAmmount() %></td>
   <td><%= order.getBill() %>$</td>
+  <td><%= order.getAddress() %></td>
+  <td><%= order.getPayment() %></td>
+  <td><a href="OrderEditServlet?orderId=<%=  order.getOrderId()  %>"  role="button">edit</a></td>
+  <td><a href="OrderDeleteServlet?orderId=<%=  order.getOrderId()  %>"  role="button">delete</a></td>
     <%
         }
     %>
+  
     </tr>
   </tbody>
 </table>

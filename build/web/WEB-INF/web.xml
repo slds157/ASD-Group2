@@ -24,6 +24,34 @@
         <servlet-name>CreatePaymentServlet</servlet-name>
         <servlet-class>uts.asd.controller.CreatePaymentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderEditServlet</servlet-name>
+        <servlet-class>uts.asd.controller.OrderEditServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <servlet-class>uts.asd.controller.UpdateOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderDeleteServlet</servlet-name>
+        <servlet-class>uts.asd.controller.OrderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentEditServlet</servlet-name>
+        <servlet-class>uts.asd.controller.PaymentEditServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentUpdateServlet</servlet-name>
+        <servlet-class>uts.asd.controller.PaymentUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentSelectServlet</servlet-name>
+        <servlet-class>uts.asd.controller.PaymentSelectServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentDeleteServlet</servlet-name>
+        <servlet-class>uts.asd.controller.PaymentDeleteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -47,6 +75,34 @@
     <servlet-mapping>
         <servlet-name>CreatePaymentServlet</servlet-name>
         <url-pattern>/CreatePaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderEditServlet</servlet-name>
+        <url-pattern>/OrderEditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <url-pattern>/UpdateOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderDeleteServlet</servlet-name>
+        <url-pattern>/OrderDeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentEditServlet</servlet-name>
+        <url-pattern>/PaymentEditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentUpdateServlet</servlet-name>
+        <url-pattern>/PaymentUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentSelectServlet</servlet-name>
+        <url-pattern>/PaymentSelectServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentDeleteServlet</servlet-name>
+        <url-pattern>/PaymentDeleteServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -17,7 +17,40 @@ public class Order {
    private int bill;
    private int userId;
    private String address;
+   private String payment;
 
+    public Order(int orderId, String itemName, int price, int ammount, int bill, int userId, String address, String payment) {
+        this.orderId = orderId;
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.userId = userId;
+        this.address = address;
+        this.payment = payment;
+    }
+
+    public Order(String itemName, int price, int ammount, int bill, int userId, String address, String payment) {
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.userId = userId;
+        this.address = address;
+        this.payment = payment;
+    }
+
+    public Order(String itemName, int price, int ammount, int bill, String address, String payment) {
+        this.itemName = itemName;
+        this.price = price;
+        this.ammount = ammount;
+        this.bill = bill;
+        this.address = address;
+        this.payment = payment;
+    }
+   
+   
+   
     public Order(String itemName, int price, int ammount, int bill) {
         this.itemName = itemName;
         this.price = price;
@@ -42,6 +75,10 @@ public class Order {
         this.bill = bill;
         this.userId = userId;
         this.address = address;
+    }
+
+    public Order(String ItemName, int price, int ammount, int bill, String address) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
    
@@ -120,6 +157,14 @@ public class Order {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
     }
    
    

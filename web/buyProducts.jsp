@@ -4,6 +4,8 @@
     Author     : kj760
 --%>
 
+<%@page import="uts.asd.model.Payment"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="zh-CN">
@@ -25,6 +27,7 @@
     <![endif]-->
   </head>
   <body>
+      
       <div class="container">
     <h1>USB Drive</h1>
     <form role="form" method="post" action="CreateOrderServlet">
@@ -41,9 +44,23 @@
   <div class="form-group">
       <p>address:</p>
 <input type="text" class="form-control" name="address" placeholder="请输入名称">
+        
 <input type="hidden" class="form-control" name="userId" value="100000">
      <input type="hidden"  name="price" value="100">
      <input type="hidden" name="itemName" value="USB Drive">
+  </div>
+         <div class="form-group">
+   <select class="form-control" name="payment">
+           <%
+        LinkedList<Payment> PaymentList = (LinkedList)session.getAttribute("paymentlist") ;
+        for(int l = 0; l < PaymentList.size();l++)
+        { Payment payment = (Payment)PaymentList.get(l);
+    %>
+    <option value="<%= payment.getCardNum() %> <%= payment.getUserName() %>"><%= payment.getCardNum() %> <%= payment.getUserName() %> </option>
+    <%
+        }
+    %>
+      </select>
   </div>
         <button type="submit" class="btn btn-default">pay</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
 </form>

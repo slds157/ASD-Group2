@@ -18,8 +18,8 @@ public class Paymentmanager {
     st = conn.createStatement();
     }
     
-    public void createPayment(String cardType, int cardNum, int userId ) throws SQLException{
-            st.executeUpdate("INSERT INTO ASDADMIN.\"PAYMENT\" (CARDTYPE, CARDNUMBER, USERID) "+ " VALUES('"+cardType+"',"+cardNum+","+userId+")");
+    public void createPayment(String cardType, int cardNum, int userId, String userName, String docType, int docNumber ) throws SQLException{
+            st.executeUpdate("INSERT INTO ASDADMIN.\"PAYMENT\" (CARDTYPE, CARDNUMBER, USERID,USERNAME, DOCTYPE, DOCNUMBER ) "+ " VALUES('"+cardType+"',"+cardNum+","+userId+",'"+userName+"','"+docType+"',"+docNumber+")");
     } 
     
     public LinkedList<Payment> PaymentList(int userId) throws SQLException {
@@ -31,12 +31,44 @@ public class Paymentmanager {
       int userID = rs.getInt(4);
       if(userID == userId)
       {
+          int paymentId = rs.getInt(1);
       String cardType = rs.getString(2);
       int cardNum = rs.getInt(3);
-   
-      temp.add(new Payment(cardType, cardNum));
+      String userName = rs.getString(5);
+      String docType =  rs.getString(6);
+      int docNum = rs.getInt(7);
+      temp.add(new Payment(paymentId ,cardType, cardNum,userID,userName,docType, docNum ));
       }
       }
       return temp;
       }
+    
+     public void updatePayment(int paymentId, String cardType, int cardNum, String userName, String docType, int docNum) throws SQLException{
+      st.executeUpdate("UPDATE ASDADMIN.\"PAYMENT\" SET CARDTYPE='"+cardType+"',CARDNUMBER="+cardNum+",USERNAME='"+userName+"',DOCTYPE='"+docType+"',DOCNUMBER="+docNum+" WHERE PAYMENTID="+paymentId+"");
+      }
+    
+            public Payment readPayment(int paymentid) throws SQLException {
+        String fetch = "SELECT * FROM ASDADMIN.\"PAYMENT\" WHERE PAYMENTID=" + paymentid + "";//read from where ID = and password = 
+        
+        ResultSet rs = st.executeQuery(fetch);
+
+        while (rs.next()) {
+            int paymentId = rs.getInt(1);
+
+            if (paymentId == paymentid) {
+               String cardType = rs.getString(2);
+               int cardNum = rs.getInt(3);
+               int userId = rs.getInt(4);
+               String userName = rs.getString(5);
+               
+               String docType = rs.getString(6);
+               int docNum = rs.getInt(7);
+                return new Payment(paymentId, cardType, cardNum, userId, userName, docType, docNum );
+            }
+        }
+        return null;
+    }
+             public void deletePayment(int paymentId) throws SQLException{
+    st.executeUpdate("DELETE FROM ASDADMIN.\"PAYMENT\" WHERE PAYMENTID="+paymentId+"");
+    }
 }

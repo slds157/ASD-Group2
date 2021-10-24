@@ -1,6 +1,6 @@
 <%-- 
-    Document   : PaymentConfirm
-    Created on : 2021-10-4, 18:06:46
+    Document   : paymentUpdateConfirm
+    Created on : 2021-10-24, 20:24:02
     Author     : kj760
 --%>
 
@@ -10,9 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+        <body>
             <%
         
         Payment payment = (Payment) session.getAttribute("payment");

@@ -23,33 +23,30 @@ import uts.asd.model.dao.Paymentmanager;
  *
  * @author kj760
  */
-public class CreatePaymentServlet extends HttpServlet {
-  @Override
-      protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException{
-            HttpSession session = request.getSession();
+public class PaymentUpdateServlet extends HttpServlet {
+
+    
+    @Override
+    protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
+    HttpSession session = request.getSession();
+            int paymentId = Integer.parseInt(request.getParameter("paymentId"));
             String cardType = request.getParameter("cardType");
             int cardNum = Integer.parseInt(request.getParameter("cardNum"));
-            int userId = Integer.parseInt(request.getParameter("userId"));
             String userName = request.getParameter("username");
             String docType = request.getParameter("doctype");
+            System.out.println("*****************"+request.getParameter("docnum"));
             int docNum = Integer.parseInt(request.getParameter("docnum"));
-
-            
-            Paymentmanager manager = (Paymentmanager) session.getAttribute("paymentmanager");
-            try
-            {  
-                
-                    manager.createPayment(cardType, cardNum, userId, userName, docType, docNum);
-                    Payment payment = new Payment(cardType, cardNum, userId);
-                    session.setAttribute("payment",payment);
-                    request.getRequestDispatcher("PaymentConfirm.jsp").include(request, response);
-                
-                
+            Payment payment = null;
+            Paymentmanager manager = (Paymentmanager)session.getAttribute("paymentmanager");
+            try{
+               manager.updatePayment(paymentId, cardType, cardNum, userName, docType, docNum);
+               payment = manager.readPayment(paymentId);
+               session.setAttribute("payment", payment);
+                request.getRequestDispatcher("paymentUpdateConfirm.jsp").include(request, response);
             } catch (SQLException ex){
-                Logger.getLogger(CreateOrderServlet.class.getName()).log(Level.SEVERE,null,ex);
+                Logger.getLogger(UpdateOrderServlet.class.getName()).log(Level.SEVERE,null,ex);
             }
     }
-    
    
+    
 }

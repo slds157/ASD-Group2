@@ -32,13 +32,14 @@ public class CreateOrderServlet extends HttpServlet {
             int ammount = Integer.parseInt(request.getParameter("ammount"));
             int userId = Integer.parseInt(request.getParameter("userId"));
             int bill = price * ammount;
-            
+            String address = request.getParameter("address");
+            String payment = request.getParameter("payment");
             OrderManager manager = (OrderManager) session.getAttribute("ordermanager");
             try
             {  
                 
-                    manager.createOrder(itemName, price, ammount, bill, userId);
-                    Order order = new Order(itemName, price, ammount, bill, userId);
+                    manager.createOrder(itemName, price, ammount, bill, userId, address, payment);
+                    Order order = new Order(itemName, price, ammount, bill, userId, address, payment);
                     session.setAttribute("order",order);
                     request.getRequestDispatcher("confirm.jsp").include(request, response);
                 

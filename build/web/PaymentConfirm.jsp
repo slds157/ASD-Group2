@@ -26,6 +26,9 @@
       
       <th>Card Type</th>
       <th>Card Number</th>
+      <th>Name</th>
+      <th>Document Type</th>
+      <th>Document Number</th>
     </tr>
   </thead>
   <tbody>
@@ -33,6 +36,9 @@
 
       <td><%= payment.getCardType() %></td>
       <td><%= payment.getCardNum() %></td>
+      <td><%= payment.getUserName()%></td>
+      <td><%= payment.getDocType() %></td>
+      <td><%= payment.getDocNumber() %></td>
     </tr>
   
   </tbody>

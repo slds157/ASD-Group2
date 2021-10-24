@@ -1,13 +1,14 @@
 <%-- 
-    Document   : CreatePayment
-    Created on : 2021-10-4, 17:33:20
+    Document   : confirmOrderUpdate
+    Created on : 2021-10-24, 16:22:25
     Author     : kj760
 --%>
 
+<%@page import="uts.asd.model.Order"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,40 +26,38 @@
     <![endif]-->
   </head>
   <body>
-       <div class="container">
-    <h1>Pruducts</h1>
-    <form role="form" method="post" action="CreatePaymentServlet">
-  <div class="form-group">
-      <p>Card Type</p>
-      <select class="form-control" name="cardType">
-          <option value="credit card">Credit Card</option>
-          <option value="deposit card">Deposit Card</option>
-      </select>
-  </div>
-  <div class="form-group">
-      <p>Card Number</p>
-<input type="number" class="form-control" name="cardNum" placeholder="请输入名称">
-<input type="hidden" class="form-control" name="userId" value="100000">
-  </div>
-  <div class="form-group">
-      <p>Name</p>
-<input type="text" class="form-control" name="username" placeholder="请输入名称">
-  </div>
-        <div class="form-group">
-      <p>Document Type</p>
-<select class="form-control" name="doctype">
-          <option value="passport">passport</option>
-          <option value="id card">id card</option>
-      </select>
-  </div>
-         <div class="form-group">
-      <p>Document Number</p>
-<input type="number" class="form-control" name="docnum" placeholder="请输入名称">
-  </div>
-        <button type="submit" class="btn btn-default">Confirm</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
-</form>
-    </div>
+    
+       <%
+        
+        Order order = (Order) session.getAttribute("order");
+        
+        %>
+<table class="table table-striped">
+  <caption>Order</caption>
+  <thead>
+    <tr>
+      
+      <th>Item name</th>
+      <th>Price</th>
+      <th>Ammount</th>
+      <th>Total cost</th>
+      <th>Address</th>
+      <th>Payment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
 
+      <td><%= order.getItemName()%></td>
+      <td><%= order.getPrice() %>$</td>
+      <td><%= order.getAmmount() %></td>
+      <td><%= order.getBill() %>$</td>
+      <td><%= order.getAddress()  %></td>
+      <td><%= order.getPayment()  %></td>
+    </tr>
+  <a href="Main.jsp" class="btn btn-default" role="button">Main Page</a>
+  </tbody>
+</table>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->

@@ -40,6 +40,21 @@
 <input type="number" class="form-control" name="cardNum" placeholder="请输入名称">
 <input type="hidden" class="form-control" name="userId" value="100000">
   </div>
+  <div class="form-group">
+      <p>Name</p>
+<input type="text" class="form-control" name="username" placeholder="请输入名称">
+  </div>
+        <div class="form-group">
+      <p>Document Type</p>
+<select class="form-control" name="doctype">
+          <option value="passport">passport</option>
+          <option value="id card">id card</option>
+      </select>
+  </div>
+         <div class="form-group">
+      <p>Document Number</p>
+<input type="number" class="form-control" name="docnum" placeholder="请输入名称">
+  </div>
         <button type="submit" class="btn btn-default">Confirm</button>  <a href="Main.jsp" class="btn btn-primary" role="button">Cancel</a> 
 </form>
     </div>

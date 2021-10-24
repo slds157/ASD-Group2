@@ -14,7 +14,40 @@ public class Payment {
     private String CardType;
     private int CardNum;
     private int UserId;
+    private String UserName;
+    private String DocType;
+    private int DocNumber;
 
+    public Payment(String CardType, int CardNum, int UserId, String UserName, String DocType, int DocNumber) {
+        this.CardType = CardType;
+        this.CardNum = CardNum;
+        this.UserId = UserId;
+        this.UserName = UserName;
+        this.DocType = DocType;
+        this.DocNumber = DocNumber;
+    }
+
+    public Payment(int PaymentId, String CardType, int CardNum, int UserId, String UserName, String DocType, int DocNumber) {
+        this.PaymentId = PaymentId;
+        this.CardType = CardType;
+        this.CardNum = CardNum;
+        this.UserId = UserId;
+        this.UserName = UserName;
+        this.DocType = DocType;
+        this.DocNumber = DocNumber;
+    }
+
+    public Payment(String CardType, int CardNum, String UserName, String DocType, int DocNumber) {
+        this.CardType = CardType;
+        this.CardNum = CardNum;
+        this.UserName = UserName;
+        this.DocType = DocType;
+        this.DocNumber = DocNumber;
+    }
+
+   
+    
+    
     public Payment(int PaymentId, String CardType, int CardNum, int UserId) {
         this.PaymentId = PaymentId;
         this.CardType = CardType;
@@ -64,6 +97,30 @@ public class Payment {
     public void setUserId(int UserId) {
         this.UserId = UserId;
     }
-    
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    public String getDocType() {
+        return DocType;
+    }
+
+    public void setDocType(String DocType) {
+        this.DocType = DocType;
+    }
+
+    public int getDocNumber() {
+        return DocNumber;
+    }
+
+    public void setDocNumber(int DocNumber) {
+        this.DocNumber = DocNumber;
+    }
+
     
 }
